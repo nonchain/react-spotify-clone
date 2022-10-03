@@ -9,8 +9,8 @@ module.exports = {
       colors: {
         black: '#191624',
         primary: {
-          100: '#1f1f1f',
-          200: '#232323',
+          100: '#292121',
+          200: '#191414',
         }
       },
       animation: {
