@@ -5,6 +5,10 @@ module.exports = {
     extend: {
       colors: {
         black: '#191624',
+        primary: {
+          100: '#1f1f1f',
+          200: '#232323',
+        }
       },
       animation: {
         slideup: 'slideup 1s ease-in-out',
