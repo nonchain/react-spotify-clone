@@ -10,7 +10,7 @@ const App = () => {
   return (
     <div className="relative flex font-main">
       <Sidebar />
-      <div className="flex-1 flex flex-col bg-primary-200">
+      <div className="w-full flex flex-col bg-primary-200">
         <Searchbar />
 
         <div className="px-6 h-[calc(100vh-72px)] overflow-y-scroll hide-scrollbar flex xl:flex-row flex-col-reverse">
