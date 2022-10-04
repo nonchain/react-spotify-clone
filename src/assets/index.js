@@ -1,7 +1,8 @@
 import loader from './loader.svg';
-import logo from './logo.svg';
+import logo from './logo.png';
 import favorite from './favorite.svg';
 import close from './close.svg';
+import menu from './menu.svg';
 import play from './play_circle.svg';
 import pause from './pause_circle.svg';
 import home from './home.svg';
@@ -20,4 +21,5 @@ export {
   voice,
   music,
   close,
+  menu,
 };
