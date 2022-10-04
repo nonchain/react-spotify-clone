@@ -61,5 +61,5 @@ const playerSlice = createSlice({
 });
 
 export const { setActiveSong, nextSong, prevSong, playPause, selectGenreListId } = playerSlice.actions;
-
+export const selectAllPlayer = (state) => state.player;
 export default playerSlice.reducer;
