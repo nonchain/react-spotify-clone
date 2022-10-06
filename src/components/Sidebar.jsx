@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useEffect, useRef, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { close, menu, logo } from '../assets';
 import { links } from '../assets/constants';
@@ -30,7 +30,7 @@ const Sidebar = () => {
       </div>
 
       {/* MOBILE MENU */}
-      <div className='block md:hidden absolute top-6 right-4 z-10'>
+      <div className='block md:hidden fixed top-4 right-4 z-10'>
         {
           isMenuOpen ?
             <img src={close} alt="close" className='cursor-pointer' onClick={() => setIsMenuOpen(false)} />
