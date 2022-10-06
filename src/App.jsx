@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
 
@@ -13,8 +14,8 @@ const App = () => {
       <div className="w-full flex flex-col bg-primary-200">
         <Searchbar />
 
-        <div className="px-6 h-[calc(100vh-72px)] overflow-y-scroll hide-scrollbar flex xl:flex-row flex-col-reverse">
-          <div className="flex-1 h-fit pb-40">
+        <div className="px-6 h-[calc(100vh-72px)] overflow-y-scroll hide-scrollbar flex lg:grid lg:gap-12 lg:grid-cols-3 xl:gap-14 flex-col-reverse">
+          <div className="flex-1 h-fit pb-40 lg:col-span-2">
             <Routes>
               <Route path="/" element={<Discover />} />
               <Route path="/top-artists" element={<TopArtists />} />
@@ -25,7 +26,7 @@ const App = () => {
               <Route path="/search/:searchTerm" element={<Search />} />
             </Routes>
           </div>
-          <div className="xl:sticky relative top-0 h-fit">
+          <div className="xl:sticky relative top-0 h-fit lg:col-span-1">
             <TopPlay />
           </div>
         </div>
