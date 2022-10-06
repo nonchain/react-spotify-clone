@@ -3,6 +3,7 @@ import logo from './logo.png';
 import favorite from './favorite.svg';
 import close from './close.svg';
 import menu from './menu.svg';
+import more from './more.svg';
 import play from './play_circle.svg';
 import pause from './pause_circle.svg';
 import home from './home.svg';
@@ -22,4 +23,5 @@ export {
   music,
   close,
   menu,
+  more,
 };
