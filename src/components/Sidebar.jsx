@@ -38,7 +38,7 @@ const Sidebar = () => {
             <img src={menu} alt="menu" className='cursor-pointer' onClick={() => setIsMenuOpen(true)} />
         }
       </div>
-      <div className={`py-6 px-5 w-2/3 h-screen absolute top-0 bg-primary-100/80 backdrop-blur-lg smooth-transition z-10 md:hidden ${isMenuOpen ? 'left-0' : '-left-full'}`}>
+      <div className={`py-6 px-5 w-2/3 h-screen absolute top-0 bg-primary-100/80 backdrop-blur-lg smooth-transition z-30 md:hidden ${isMenuOpen ? 'left-0' : '-left-full'}`}>
       <div className='mb-8 w-full h-14 flex gap-4 items-center justify-center'>
           <img src={logo} alt="Logo" className='w-12 h-12' />
           <h2 className='text-2xl text-white font-semibold'>Revex</h2>
