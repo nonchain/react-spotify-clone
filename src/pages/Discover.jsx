@@ -13,8 +13,9 @@ const Discover = () => {
    if (isFetching) return <Loader title='Loading songs' />
    if (error) return <Error />
 
+   console.log('Discover')
    return (
-      <div className='flex flex-col-reverse lg:grid lg:gap-12 lg:grid-cols-3 xl:gap-14'>
+      <div className='px-6 flex flex-col-reverse lg:grid lg:gap-12 lg:grid-cols-3 xl:gap-14'>
 
          <div className='flex flex-col lg:col-span-2'>
             <div className='mt-4 mb-10 w-full flex flex-col items-center justify-center sm:flex-row sm:justify-between'>
