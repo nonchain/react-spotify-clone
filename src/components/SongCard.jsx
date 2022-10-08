@@ -13,8 +13,17 @@ const SongCard = ({ song, index, data, isPlaying, activeSong }) => {
     dispatch(playPause(false));
   }
   const handelPlayClick = () => {
-    dispatch(setActiveSong({song, data, index}));
+    dispatch(setActiveSong({ song, data, index }));
     dispatch(playPause(true));
+  }
+
+  const details = {
+    song: song,
+    data: data,
+    index: index
+    // isPlaying: isPlaying,
+    // activeSong: activeSong,
+    // text: 'Ali'
   }
 
   return (
@@ -33,7 +42,7 @@ const SongCard = ({ song, index, data, isPlaying, activeSong }) => {
       </div>
       {/*===== TITLE & ARTIST =====*/}
       <div className='ml-2 col-span-3 truncate flex flex-col gap-1'>
-        <Link to={`/songs/${song?.key}`}>
+        <Link to={`/songs/${song?.key}`} state={{ data: details }}>
           <h2 className='text-base text-white font-semibold truncate'>{song.title}</h2>
         </Link>
         <Link to={song?.artists ? `/artist/${song?.artists[0]?.adamid}` : '/top-artists'}>
