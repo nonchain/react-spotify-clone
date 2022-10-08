@@ -14,21 +14,19 @@ const App = () => {
       <div className="w-full flex flex-col bg-primary-200">
         <Searchbar />
 
-        <div className="px-6 h-[calc(100vh-72px)] overflow-y-scroll hide-scrollbar flex lg:grid lg:gap-12 lg:grid-cols-3 xl:gap-14 flex-col-reverse">
-          <div className="flex-1 h-fit pb-40 lg:col-span-2">
+        <div className="px-6 h-[calc(100vh-72px)] overflow-y-scroll hide-scrollbar flex">
+          <div className="flex-1 h-fit pb-40">
             <Routes>
               <Route path="/" element={<Discover />} />
               <Route path="/top-artists" element={<TopArtists />} />
               <Route path="/top-charts" element={<TopCharts />} />
               <Route path="/around-you" element={<AroundYou />} />
               <Route path="/artists/:id" element={<ArtistDetails />} />
-              <Route path="/songs/:songid" element={<SongDetails />} />
+              <Route path="/songs/:songId" element={<SongDetails />} />
               <Route path="/search/:searchTerm" element={<Search />} />
             </Routes>
           </div>
-          <div className="xl:sticky relative top-0 h-fit lg:col-span-1">
-            <TopPlay />
-          </div>
+          
         </div>
       </div>
 
