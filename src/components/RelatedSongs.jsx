@@ -18,7 +18,7 @@ const RelatedSongs = ({ songId }) => {
       <div className='mt-4 flex flex-wrap justify-center gap-3 sm:justify-start'>
         {
           relatedData?.map((item, index) => (
-            <SongCard
+            item?.artists && <SongCard
               key={`${item?.key}-${item?.artists[0]?.adamid}`}
               song={item}
               isPlaying={isPlaying}
