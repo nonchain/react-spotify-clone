@@ -37,10 +37,10 @@ const SongDetails = () => {
       <React.Fragment>
          <div className='mt-8 flex flex-col'>
             {/*====== HEADER =====*/}
-            <div className='w-full h-80 relative overflow-hidden'>
+            <div className='w-full h-80 relative overflow-hidden lg:h-96'>
                <img src={songData?.images?.coverart} alt="" className='w-full h-full object-cover' />
                <div className="absolute inset-0 bg-[#00000058] z-10"></div>
-               <div className='px-4 py-6 w-full h-full flex flex-col justify-between absolute inset-0 z-20'>
+               <div className='px-4 py-6 w-full h-full flex flex-col justify-between absolute inset-0 z-20 md:px-8 md:py-10'>
                   <div className="flex items-center justify-between">
                      <span className='text-xs text-gray-300 '>Discover / Song Details</span>
                      <img src={more} alt="more" />
@@ -60,7 +60,7 @@ const SongDetails = () => {
                </div>
             </div>
             {/*====== BODY =====*/}
-            <div className='px-6 py-8 flex flex-col'>
+            <div className='px-6 pt-8 flex flex-col md:px-8 md:pt-10'>
                <div className='w-full flex items-center justify-between'>
                   <div className='flex flex-col'>
                      <h1 className='text-3xl text-white font-bold'>{songData?.title}</h1>
@@ -76,17 +76,24 @@ const SongDetails = () => {
                      className='w-16 h-16 cursor-pointer' />
                </div>
 
-               <h2 className='mt-6 text-xl text-white font-semibold'>Lyrics</h2>
-               <p className={`mt-2 overflow-hidden ${viewMore ? '' : 'text-cover h-[230px]'}`}>
-                  {
-                     songData?.sections[1].type === 'LYRICS' ? songData.sections[1].text.map(
-                        (line, i) => (line === '' ? <br key={i} /> : <p className='text-white text-sm' key={i}>{line}</p>)
-                     ) : <p className='text-gray-100 text-sm'>No lyrics found!</p>
-                  }
-               </p>
-               <button type='button' className='mt-4 text-[#1DB954] text-base font-semibold' onClick={() => setViewMore(!viewMore)}>View {viewMore ? 'less' : 'more'}</button>
+               <div className='flex flex-col-reverse lg:grid lg:grid-cols-5 lg:gap-x-12'>
+                  <div className='lg:col-span-3'>
+                     <RelatedSongs songId={songId} />
+                  </div>
+                  <div className='flex flex-col lg:col-span-2'>
+                     <h2 className='mt-6 text-xl text-white font-semibold lg:mt-12'>Lyrics</h2>
+                     <p className={`mt-2 overflow-hidden ${viewMore ? '' : 'text-cover h-[230px]'}`}>
+                        {
+                           songData?.sections[1].type === 'LYRICS' ? songData.sections[1].text.map(
+                              (line, i) => (line === '' ? <br key={i} /> : <p className='text-white text-sm' key={i}>{line}</p>)
+                           ) : <p className='text-gray-100 text-sm'>No lyrics found!</p>
+                        }
+                     </p>
+                     <button type='button' className='mt-4 text-[#1DB954] text-base font-semibold' onClick={() => setViewMore(!viewMore)}>View {viewMore ? 'less' : 'more'}</button>
+                  </div>
 
-               <RelatedSongs songId={songId} />
+
+               </div>
             </div>
          </div>
       </React.Fragment>
