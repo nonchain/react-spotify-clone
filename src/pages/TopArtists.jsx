@@ -11,21 +11,17 @@ const TopArtists = () => {
    if (isFetching) return <Loader title={'Loading top songs'} />
    if (error) return <Error />
 
+   console.log(data);
    return (
       <React.Fragment>
          <div className="px-6 mt-8 flex flex-col">
             <h2 className='text-3xl font-bold text-white text-left'>Top Songs</h2>
-            <div className='mt-4 flex flex-wrap justify-center gap-3 sm:justify-start'>
+            <div className='mt-4 grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-6 sm:mt-6 lg:grid-cols-4 lg:gap-8'>
                {
                   data?.map((item, index) => (
-                     item?.artists && <ArtistCard
+                     item?.artists && item?.artists && <ArtistCard
                         key={item.key}
-                        data={data}
-                        song={item}
-                        isPlaying={isPlaying}
-                        activeSong={activeSong}
-                        index={index}
-                        homePage={'Around You'}
+                        track={item}
                      />
                   ))
                }
