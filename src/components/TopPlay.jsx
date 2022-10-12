@@ -49,7 +49,7 @@ const TopPlay = () => {
       <div className='mt-8'>
         <div className='flex items-center justify-between'>
           <h2 className='text-white text-xl font-semibold'>Top artist</h2>
-          <Link to={'/top-charts'}>
+          <Link to={'/top-artists'}>
             <span className='text-gray-300 text-sm font-medium hover:text-blue-500'>See more</span>
           </Link>
         </div>
