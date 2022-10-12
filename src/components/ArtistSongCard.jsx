@@ -9,7 +9,6 @@ import { favorite } from '../assets'
 const ArtistSongCard = ({ song, index, data, isPlaying, activeSong }) => {
    const dispatch = useDispatch();
    const coverArt = [...song.artwork?.url].slice(0,-13).join('') + '128x128bb.jpg';
-   console.log(coverArt);
 
    const handelPauseClick = () => {
       dispatch(playPause(false));

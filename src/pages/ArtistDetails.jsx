@@ -20,7 +20,7 @@ const ArtistDetails = () => {
   return (
     <React.Fragment>
       <div className='mt-8 flex flex-col'>
-        {/*====== HEADER =====*/}
+        {/*====== HEADER =====* /}
         {/* <div className='w-full h-80 relative overflow-hidden lg:h-96'>
           <img src={songData?.images?.coverart} alt="" className='w-full h-full object-cover' />
           <div className="absolute inset-0 bg-[#00000058] z-10"></div>

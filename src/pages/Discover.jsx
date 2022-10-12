@@ -19,7 +19,7 @@ const Discover = () => {
 
          <div className='flex flex-col lg:col-span-2'>
             <div className='mt-4 mb-10 w-full flex flex-col items-center justify-center sm:flex-row sm:justify-between'>
-               <h2 className='text-3xl font-bold text-white text-left'>Discover</h2>
+               <h2 className='text-3xl font-bold text-white text-left'>Hello</h2>
                <select
                   name=""
                   id=""
