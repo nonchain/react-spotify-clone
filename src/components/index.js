@@ -3,6 +3,7 @@ import Searchbar from './Searchbar';
 import SongCard from './SongCard';
 import TopPlay from './TopPlay';
 import ArtistCard from './ArtistCard';
+import ArtistSongCard from './ArtistSongCard';
 import DetailsHeader from './DetailsHeader';
 import SongBar from './SongBar';
 import RelatedSongs from './RelatedSongs';
@@ -16,6 +17,7 @@ export {
   SongCard,
   Searchbar,
   ArtistCard,
+  ArtistSongCard,
   DetailsHeader,
   SongBar,
   RelatedSongs,
