@@ -6,7 +6,7 @@ import PlayPause from './PlayPause';
 
 import { favorite } from '../assets'
 
-const SongCard = ({ song, index, data, isPlaying, activeSong }) => {
+const SongCard = ({ homePage, song, index, data, isPlaying, activeSong }) => {
   const dispatch = useDispatch();
 
   const handelPauseClick = () => {
@@ -20,10 +20,8 @@ const SongCard = ({ song, index, data, isPlaying, activeSong }) => {
   const details = {
     song: song,
     data: data,
-    index: index
-    // isPlaying: isPlaying,
-    // activeSong: activeSong,
-    // text: 'Ali'
+    index: index,
+    homePage
   }
 
   return (
