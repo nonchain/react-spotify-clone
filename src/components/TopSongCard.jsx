@@ -17,6 +17,12 @@ const TopSongCard = ({ song, index, data, isPlaying, activeSong }) => {
     dispatch(playPause(true));
   }
 
+  const details = {
+    song: song,
+    data: data,
+    index: index
+  }
+
   return (
     <div className='w-full grid grid-cols-5 backdrop-blur-sm cursor-pointer justify-between items-center opacity-80 animate-slideup'>
       {/*===== IMAGE =====*/}
@@ -33,7 +39,7 @@ const TopSongCard = ({ song, index, data, isPlaying, activeSong }) => {
       </div>
       {/*===== TITLE & ARTIST =====*/}
       <div className='ml-2 col-span-3 truncate flex flex-col gap-1'>
-        <Link to={`/songs/${song?.key}`}>
+        <Link to={`/songs/${song?.key}`} state={{ data: details }}>
           <h2 className='text-base text-white font-semibold truncate'>{song.title}</h2>
         </Link>
         <Link to={song?.artists ? `/artist/${song?.artists[0]?.adamid}` : '/top-artists'}>
