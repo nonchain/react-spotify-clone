@@ -19,7 +19,8 @@ const SongDetails = () => {
    const {
       song,
       data,
-      index
+      index,
+      homePage
    } = location.state?.data;
 
    const handelPauseClick = () => {
@@ -42,7 +43,7 @@ const SongDetails = () => {
                <div className="absolute inset-0 bg-[#00000058] z-10"></div>
                <div className='px-4 py-6 w-full h-full flex flex-col justify-between absolute inset-0 z-20 md:px-8 md:py-10'>
                   <div className="flex items-center justify-between">
-                     <span className='text-xs text-gray-300 '>Discover / Song Details</span>
+                     <span className='text-xs text-gray-300 '>{homePage} / Song Details</span>
                      <img src={more} alt="more" />
                   </div>
 
