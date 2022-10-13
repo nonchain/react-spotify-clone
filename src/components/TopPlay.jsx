@@ -19,12 +19,10 @@ const TopPlay = () => {
   const { data } = useGetTopChartsQuery();
   const topPlay = data?.slice(0, 5);
 
-  useEffect(() => {
-    divRef.current.scrollIntoView({ behavior: 'smooth', });
-  },[]);
+  
 
   return (
-    <div ref={divRef} className='mt-8 md:mt-3'>
+    <div className='md:mt-4'>
       <div className='flex items-center justify-between'>
         <h2 className='text-white text-xl font-semibold'>Top charts</h2>
         <Link to={'/top-charts'}>
