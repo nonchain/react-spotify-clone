@@ -46,7 +46,7 @@ const ArtistSongCard = ({ song, index, data, isPlaying, activeSong }) => {
             <Link to={`/songs/${song?.playParams?.id}`} state={{ data: details }}>
                <h2 className='text-base text-white font-semibold truncate'>{song.name}</h2>
             </Link>
-            <p className='text-xs text-gray-300 font-medium truncate'>{song.releaseDate}</p>
+            <p className='text-xs text-gray-300 font-medium truncate'>{song.albumName}</p>
          </div>
 
          <div className='flex items-center justify-end'>
