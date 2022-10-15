@@ -26,11 +26,11 @@ const ArtistDetails = () => {
     <React.Fragment>
       <div className='flex flex-col'>
         {/*====== HEADER =====*/}
-        <div className='px-4 w-full flex items-start justify-start gap-4'>
-          <img src={artistArt} alt="" className='w-28 h-28 rounded-lg overflow-hidden object-cover' />
+        <div className='px-4 w-full flex items-start justify-start gap-4 md:px-8 md:gap-6'>
+          <img src={artistArt} alt="" className='w-28 h-28 rounded-lg overflow-hidden object-cover md:w-36 lg:w-44 md:h-36 lg:h-44' />
           <div className='flex flex-col justify-between'>
             <div className='flex items-end justify-between'>
-              <div className='h-28 flex flex-col justify-between'>
+              <div className='h-28 md:h-36 lg:h-44 flex flex-col justify-between'>
                 <div className="flex flex-col">
                 <h1 className='text-3xl text-white'>{artistsData?.name}</h1>
                 <div className="flex items-center">
