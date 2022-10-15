@@ -6,7 +6,7 @@ import PlayPause from './PlayPause';
 
 import { favorite } from '../assets'
 
-const ArtistSongCard = ({ song, index, data, isPlaying, activeSong }) => {
+const ArtistSongCard = ({homePage, song, index, data, isPlaying, activeSong }) => {
    const dispatch = useDispatch();
    const coverArt = [...song.artwork?.url].slice(0,-13).join('') + '128x128bb.jpg';
 
@@ -21,11 +21,9 @@ const ArtistSongCard = ({ song, index, data, isPlaying, activeSong }) => {
    const details = {
       song: song,
       data: data,
-      index: index
-      // isPlaying: isPlaying,
-      // activeSong: activeSong,
-      // text: 'Ali'
-   }
+      index: index,
+      homePage
+    }
 
    return (
       <div className='w-full grid grid-cols-5 backdrop-blur-sm cursor-pointer justify-between items-center opacity-80 animate-slideup'>
